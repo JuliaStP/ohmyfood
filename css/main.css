@@ -1,0 +1,466 @@
+@keyframes myAnimation {
+  0% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes myAnimationPrice {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+html {
+  box-sizing: border-box;
+  color: #000;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 22px !important;
+}
+
+h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.btn-new {
+  position: absolute;
+  padding: 6px 20px;
+  border-radius: 3px;
+  background-color: mediumaquamarine;
+  color: green;
+  font-size: 10px;
+  z-index: 10;
+  left: 75%;
+  top: 5%;
+}
+
+.btn {
+  margin-bottom: 50px;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 3px 3px 3px 3px lightgrey;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 1000ms;
+}
+.btn:hover {
+  transform: scale(1.15);
+}
+.btn--order {
+  padding: 10px 55px;
+}
+
+.like-container {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like-container__svg {
+  fill: grey;
+}
+.like-container__svg--active {
+  fill: #9356DC;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.like-container:active .like-container__svg, .like-container:hover .like-container__svg {
+  display: none;
+}
+.like-container:active .like-container__svg--active, .like-container:hover .like-container__svg--active {
+  display: block;
+  opacity: 1;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-menu {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-btn {
+  margin-left: 30px;
+  width: 5%;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo--menu {
+  width: 95%;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-pic {
+  width: 200px;
+}
+
+.back-btn__svg {
+  margin-bottom: 20px;
+  fill: #000;
+}
+
+footer {
+  color: #fff;
+  background-color: #3C4142;
+}
+
+/* How to change fill color?????????????????????????????? */
+.footer-logo-pic {
+  fill: white;
+  width: 30%;
+  padding: 15px 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.footer-nav a {
+  margin-bottom: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item-pic {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.restaurants, .how, footer {
+  padding: 0 30px;
+}
+
+.location {
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-svg-container {
+  margin-right: 15px;
+}
+
+.location-info {
+  margin: 14px 0;
+}
+
+.hero {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  margin: 30px !important;
+}
+
+.hero-motto {
+  font-size: 16px;
+  color: gray;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.how-step {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+  width: 90%;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 5px lightgrey;
+  margin-bottom: 15px;
+}
+
+.how-number {
+  color: #fff;
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  right: 7%;
+}
+
+.how-item {
+  display: flex;
+  align-items: center;
+}
+
+.how-svg-container {
+  padding-right: 20px;
+}
+
+.svg--main {
+  fill: #3C4142;
+}
+
+.restaurants-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurants-item {
+  width: 100%;
+  height: 200px;
+  box-shadow: 3px 3px 3px 3px lightgrey;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 10px 10px 10px 10px #F2F2F2;
+}
+
+.restaurants-img-container {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.restaurants-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurants-content {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurants-name {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.restaurants-place {
+  font-weight: lighter;
+}
+
+body {
+  background: #F2F2F2;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 350px;
+  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) no-repeat center;
+  background-size: cover;
+  margin-bottom: 0;
+}
+.restaurant__img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.restaurant__header {
+  width: 100%;
+  background: #F2F2F2;
+  margin-top: 50px;
+  padding: 15px 30px;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  background: #F2F2F2;
+}
+.menu__title {
+  color: grey;
+  margin-bottom: 0;
+  line-height: 6px;
+}
+.menu__line {
+  color: #99E2D0;
+  font-weight: bold;
+}
+.menu__container {
+  margin-bottom: 30px;
+}
+
+.menu-list__item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px lightgrey;
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  margin-bottom: 15px;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+.menu-list__item:hover .menu-list__btn {
+  position: static;
+  display: flex;
+  transition: 1s;
+  animation: myAnimation 1s;
+}
+.menu-list__item:hover .menu-list__btn-svg {
+  transform: translate(50px, 100px) translate(-50px, -100px) rotate(360deg);
+  transition: 1s;
+}
+.menu-list__item:hover .menu-list__price {
+  animation: myAnimationPrice 1s;
+}
+.menu-list__info {
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-list__name {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-list__desc {
+  color: grey;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-list__btn {
+  height: 60px;
+  width: 60px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 15px 15px 0;
+  transform: translateX(60px);
+  margin-left: 10px;
+}
+.menu-list__price-container {
+  display: flex;
+  height: inherit;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding: 0;
+}
+.menu-list__price {
+  align-self: flex-end;
+  margin-right: -50px;
+  margin-bottom: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+#n1 {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#n2 {
+  animation: fadein 4s;
+  animation-delay: 1s;
+}
+
+#n3 {
+  animation: fadein 4s;
+  animation-delay: 2s;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    color: #000;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  body{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+    font-family: 'Roboto', sans-serif;
+  }
+ 
+  h1 {
+    font-size: 22px !important;
+  }
+
+  h2 {
+    font-family: 'Shrikhand', sans-serif;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  } 

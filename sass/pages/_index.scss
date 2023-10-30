@@ -1,0 +1,135 @@
+.restaurants, .how, footer {
+    padding: 0 30px;
+}
+
+  .location {
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.location-svg-container {
+    margin-right: 15px;
+}
+
+  .location-info{
+    margin: 14px 0;
+  }
+
+  .hero {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    margin: 30px !important;
+  }
+
+  .hero-motto {
+    font-size: 16px;
+    color:gray;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .how-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .how-step {
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    width: 90%;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px lightgrey;
+    margin-bottom: 15px;
+  }
+
+  .how-number {
+    color: #fff;
+    background-color: #9356DC;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative; 
+    right:7%
+  }
+
+  .how-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .how-svg-container {
+    padding-right: 20px;
+  }
+
+  .svg--main {
+    fill:#3C4142;
+  }
+
+  .restaurants-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.restaurants-item {
+    width: 100%;
+    height: 200px;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 10px 10px 10px 10px #F2F2F2;
+  }
+
+.restaurants-img-container {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.restaurants-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.restaurants-content {
+    padding: 0 15px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurants-name {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.restaurants-place {
+    font-weight: lighter;
+}
+
+
