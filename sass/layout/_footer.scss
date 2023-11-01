@@ -2,29 +2,35 @@ footer {
     color: #fff;
     background-color: #3C4142;
 }
-/* How to change fill color?????????????????????????????? */
+
+.footer-logo{
+    @media screen and (min-width: 1024px){ 
+        margin-left: 0;
+    }
+}
+
 .footer-logo-pic  {
     fill: white;
     width: 30%;
     padding: 15px 0;
 }
  
-.footer-nav {
+.nav {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
 }
 
-.footer-nav a {
+.nav a {
     margin-bottom: 8px;
 }
 
-.nav-item {
+.nav__item {
     display: flex;
     align-items: center;
 }
 
-.nav-item-pic {
+.nav__item-pic {
     width: 20px;
     margin-right: 5px;
 }

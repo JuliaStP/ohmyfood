@@ -19,10 +19,16 @@
     box-shadow: 3px 3px 3px 3px lightgrey;
     transform: scale(1);
     transition-property: transform;
-    transition-duration: 1000ms;
+    transition-duration: 500ms;
     
     &:hover {
         transform: scale(1.15);
+    }
+
+    &--hero {
+        @media screen and (min-width: 1024px){ 
+            margin-left: 30px;
+        }
     }
 
     &--order {
@@ -38,8 +44,17 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 1024px){ 
+        align-self: flex-end;
+        margin: 30px;
+    }
+
         &__svg {
             fill: grey;
+
+            @media screen and (min-width: 1024px){ 
+                height: 2.5em; 
+            }
         }
 
         &__svg--active {
@@ -51,6 +66,9 @@
             -ms-transition: all 500ms ease-in-out;
             -o-transition: all 500ms ease-in-out;
             transition: all 500ms ease-in-out;
+            @media screen and (min-width: 1024px){ 
+                height: 2.5em; 
+            }
         }
 
         &:active, &:hover {
@@ -72,5 +90,10 @@
         //         opacity: 1.0;
         //     }
         // }
+
+        @media screen and (min-width: 1024px){ 
+            width: 50px;
+            height: 50px; 
+        }
     
 }

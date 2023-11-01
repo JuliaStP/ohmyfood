@@ -14,16 +14,60 @@
     transform: translateX(-50px);
   }
 }
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+li:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+li:nth-child(3) {
+  animation-delay: 0.75s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html {
   box-sizing: border-box;
   color: #000;
   font-size: 14px;
-  margin-top: 30px;
 }
 
 body {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 *, *:before, *:after {
@@ -32,7 +76,12 @@ body {
 }
 
 h1 {
-  font-size: 22px !important;
+  font-size: 22px;
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 30px;
+  }
 }
 
 h2 {
@@ -81,10 +130,15 @@ section {
   box-shadow: 3px 3px 3px 3px lightgrey;
   transform: scale(1);
   transition-property: transform;
-  transition-duration: 1000ms;
+  transition-duration: 500ms;
 }
 .btn:hover {
   transform: scale(1.15);
+}
+@media screen and (min-width: 1024px) {
+  .btn--hero {
+    margin-left: 30px;
+  }
 }
 .btn--order {
   padding: 10px 55px;
@@ -98,8 +152,19 @@ section {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .like-container {
+    align-self: flex-end;
+    margin: 30px;
+  }
+}
 .like-container__svg {
   fill: grey;
+}
+@media screen and (min-width: 1024px) {
+  .like-container__svg {
+    height: 2.5em;
+  }
 }
 .like-container__svg--active {
   fill: #9356DC;
@@ -111,6 +176,11 @@ section {
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+@media screen and (min-width: 1024px) {
+  .like-container__svg--active {
+    height: 2.5em;
+  }
+}
 .like-container:active .like-container__svg, .like-container:hover .like-container__svg {
   display: none;
 }
@@ -118,11 +188,23 @@ section {
   display: block;
   opacity: 1;
 }
+@media screen and (min-width: 1024px) {
+  .like-container {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 header {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    align-items: flex-start;
+  }
 }
 
 .header-menu {
@@ -138,6 +220,11 @@ header {
 
 .logo {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .logo {
+    margin-left: 30px;
+  }
 }
 
 .logo--menu {
@@ -161,29 +248,34 @@ footer {
   background-color: #3C4142;
 }
 
-/* How to change fill color?????????????????????????????? */
+@media screen and (min-width: 1024px) {
+  .footer-logo {
+    margin-left: 0;
+  }
+}
+
 .footer-logo-pic {
   fill: white;
   width: 30%;
   padding: 15px 0;
 }
 
-.footer-nav {
+.nav {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
 }
 
-.footer-nav a {
+.nav a {
   margin-bottom: 8px;
 }
 
-.nav-item {
+.nav__item {
   display: flex;
   align-items: center;
 }
 
-.nav-item-pic {
+.nav__item-pic {
   width: 20px;
   margin-right: 5px;
 }
@@ -199,9 +291,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .location {
+    justify-content: flex-start;
+  }
+}
 
 .location-svg-container {
   margin-right: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .location-svg-container {
+    margin-left: 30px;
+  }
 }
 
 .location-info {
@@ -214,12 +316,15 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
-.hero-title {
+@media screen and (min-width: 1024px) {
+  .hero {
+    align-items: flex-start;
+  }
+}
+.hero__title {
   margin: 30px !important;
 }
-
-.hero-motto {
+.hero__motto {
   font-size: 16px;
   color: gray;
   font-weight: lighter;
@@ -227,15 +332,27 @@ footer {
   padding: 0 20px;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .hero__motto {
+    font-size: 20px;
+    padding: 0 30px;
+  }
+}
 
-.how-steps {
+.how__steps {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
 }
+@media screen and (min-width: 1024px) {
+  .how__steps {
+    align-items: flex-start;
+    margin-left: 30px;
+  }
+}
 
-.how-step {
+.how__step {
   display: flex;
   align-items: center;
   background-color: #F2F2F2;
@@ -245,8 +362,14 @@ footer {
   box-shadow: 5px 5px 5px 5px lightgrey;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 1024px) {
+  .how__step {
+    width: 50%;
+    font-size: 18px;
+  }
+}
 
-.how-number {
+.how__number {
   color: #fff;
   background-color: #9356DC;
   width: 30px;
@@ -259,13 +382,20 @@ footer {
   position: relative;
   right: 7%;
 }
+@media screen and (min-width: 1024px) {
+  .how__number {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
 
-.how-item {
+.how__item {
   display: flex;
   align-items: center;
 }
 
-.how-svg-container {
+.how__svg-container {
   padding-right: 20px;
 }
 
@@ -273,13 +403,25 @@ footer {
   fill: #3C4142;
 }
 
-.restaurants-wrapper {
+.restaurants__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 767px) {
+  .restaurants__wrapper {
+    height: 500px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__wrapper {
+    height: 100%;
+  }
+}
 
-.restaurants-item {
+.restaurants__item {
   width: 100%;
   height: 200px;
   box-shadow: 3px 3px 3px 3px lightgrey;
@@ -288,8 +430,22 @@ footer {
   margin-bottom: 15px;
   box-shadow: 10px 10px 10px 10px #F2F2F2;
 }
+@media screen and (min-width: 767px) {
+  .restaurants__item {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__item {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
-.restaurants-img-container {
+.restaurants__img-container {
   width: 100%;
   height: 70%;
   overflow: hidden;
@@ -298,26 +454,67 @@ footer {
   justify-content: center;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants__img-container {
+    width: 48%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+  }
+}
 
-.restaurants-img {
+.restaurants__img {
   width: 100%;
   object-fit: cover;
 }
 
-.restaurants-content {
+.restaurants__content {
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants__content {
+    width: 48%;
+  }
+}
 
-.restaurants-name {
+@media screen and (min-width: 1024px) {
+  .restaurants__info {
+    margin-right: 30px;
+  }
+}
+
+.restaurants__name {
   margin: 8px 0;
   font-weight: bold;
 }
+@media screen and (min-width: 1024px) {
+  .restaurants__name {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
 
-.restaurants-place {
+.restaurants__text {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__text {
+    display: block;
+    margin-bottom: 20px;
+    line-height: 25px;
+    font-size: 14px;
+  }
+}
+
+.restaurants__place {
   font-weight: lighter;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__place {
+    font-size: 20px;
+  }
 }
 
 body {
@@ -330,9 +527,9 @@ body {
   justify-content: flex-end;
   width: 100%;
   height: 350px;
+  margin-bottom: 0;
   background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) no-repeat center;
   background-size: cover;
-  margin-bottom: 0;
 }
 .restaurant__img-container {
   width: 100%;
@@ -441,26 +638,34 @@ body {
   justify-content: center;
 }
 
-#n1 {
-  animation: fadein 2s;
+li {
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#n2 {
-  animation: fadein 4s;
-  animation-delay: 1s;
+html {
+  height: 100%;
 }
 
-#n3 {
-  animation: fadein 4s;
-  animation-delay: 2s;
+.welcome {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+
+.wrapper-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo--welcome {
+  opacity: 0;
+  animation: bounceIn 3s forwards;
+}
+
+.logo-pic--welcome {
+  width: 300px;
 }
 
 /*# sourceMappingURL=main.css.map */

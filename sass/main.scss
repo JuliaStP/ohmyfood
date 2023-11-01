@@ -1,6 +1,6 @@
 @import "./utils/variables";
 @import "./utils/animation";
-// @import "./utils/mixins";
+@import "./utils/mixins";
 // @import "./utils/extensions";
 
 @import "./base/base";
@@ -13,3 +13,4 @@
 
 @import "./pages/index";
 @import "./pages/thefullpalette";
+@import "./pages/welcome";
