@@ -1,16 +1,17 @@
 @import "./utils/variables";
 @import "./utils/animation";
 @import "./utils/mixins";
-// @import "./utils/extensions";
 
 @import "./base/base";
-// @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/welcome";
 
 @import "./layout/header";
 @import "./layout/footer";
 
 @import "./pages/index";
+@import "./pages/bastille";
+@import "./pages/theenchantedplate";
 @import "./pages/thefullpalette";
-@import "./pages/welcome";
+@import "./pages/legourmand";

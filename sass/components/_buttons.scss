@@ -1,99 +1,97 @@
 .btn-new {
-    position: absolute;
-    padding: 6px 20px;
-    border-radius: 3px;
-    background-color: mediumaquamarine;
-    color: green;
-    font-size: 10px;
-    z-index: 10;
-    left: 75%;
-    top: 5%;
+  position: absolute;
+  padding: 6px 20px;
+  border-radius: 3px;
+  background-color: mediumaquamarine;
+  color: green;
+  font-size: 10px;
+  z-index: 10;
+  left: 75%;
+  top: 5%;
 }
 
 .btn {
-    margin-bottom: 50px;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    box-shadow: 3px 3px 3px 3px lightgrey;
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 500ms;
-    
-    &:hover {
-        transform: scale(1.15);
-    }
+  margin-bottom: 50px;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+  box-shadow: 3px 3px 3px 3px lightgrey;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 500ms;
 
-    &--hero {
-        @media screen and (min-width: 1024px){ 
-            margin-left: 30px;
-        }
-    }
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
 
-    &--order {
-        padding: 10px 55px;
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  &--hero {
+    @media screen and (min-width: 1024px) {
+      margin-left: 30px;
     }
   }
 
-  .like-container {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &--order {
+    padding: 10px 55px;
+  }
+}
 
-    @media screen and (min-width: 1024px){ 
-        align-self: flex-end;
-        margin: 30px;
+.like-container {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    align-self: flex-end;
+    margin: 30px;
+  }
+
+  &__svg {
+    fill: grey;
+
+    @media screen and (min-width: 1024px) {
+      height: 2.5em;
     }
+  }
 
-        &__svg {
-            fill: grey;
+  &__svg--active {
+    fill: $color-primary;
+    display: none;
+    opacity: 0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    @media screen and (min-width: 1024px) {
+      height: 2.5em;
+    }
+  }
 
-            @media screen and (min-width: 1024px){ 
-                height: 2.5em; 
-            }
-        }
+  &:active,
+  &:hover {
+    .like-container__svg {
+      display: none;
+    }
+    .like-container__svg--active {
+      display: block;
+      opacity: 1;
+    }
+  }
 
-        &__svg--active {
-            fill: $color-primary;
-            display: none;
-            opacity: 0.0;
-            -webkit-transition: all 500ms ease-in-out;
-            -moz-transition: all 500ms ease-in-out;
-            -ms-transition: all 500ms ease-in-out;
-            -o-transition: all 500ms ease-in-out;
-            transition: all 500ms ease-in-out;
-            @media screen and (min-width: 1024px){ 
-                height: 2.5em; 
-            }
-        }
-
-        &:active, &:hover {
-            .like-container__svg {
-                display: none;
-            }
-            .like-container__svg--active {
-                display: block;
-                opacity: 1.0;
-            }
-        }
-
-        // &:hover {
-        //     .like-container__svg {
-        //         display: none;
-        //     }
-        //     .like-container__svg--active  {
-        //         display: block;
-        //         opacity: 1.0;
-        //     }
-        // }
-
-        @media screen and (min-width: 1024px){ 
-            width: 50px;
-            height: 50px; 
-        }
-    
+  @media screen and (min-width: 1024px) {
+    width: 50px;
+    height: 50px;
+  }
 }

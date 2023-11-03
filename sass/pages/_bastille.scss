@@ -1,0 +1,158 @@
+body {
+  background: $color-grey;
+}
+
+.restaurant {
+  @include restaurant;
+  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  background: $color-grey;
+
+  @media screen and (min-width: 767px) {
+    align-items: center;
+  }
+
+  &__course {
+    @media screen and (min-width: 767px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 35%;
+    }
+  }
+
+  &__title {
+    color: grey;
+    margin-bottom: 0;
+    line-height: 6px;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 45px;
+    }
+  }
+
+  &__line {
+    color: $color-tertiary;
+    font-weight: bold;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 45px;
+    }
+  }
+
+  &__container {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 767px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+
+.menu-list {
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
+
+  &__item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    margin-bottom: 15px;
+    overflow-x: hidden;
+    cursor: pointer;
+
+    &:hover {
+      .menu-list__btn {
+        position: static;
+        display: flex;
+        transition: 1s;
+        animation: myAnimation 1s forwards;
+      }
+
+      .menu-list__btn-svg {
+        transform: translate(50px, 100px) translate(-50px, -100px)
+          rotate(360deg);
+        transition: 1s;
+      }
+
+      .menu-list__price {
+        animation: myAnimationPrice 1s forwards;
+      }
+    }
+  }
+
+  &__info {
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__desc {
+    color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__btn {
+    height: 60px;
+    width: 60px;
+    background-color: $color-tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0;
+    transform: translateX(60px);
+    margin-left: 10px;
+  }
+
+  &__price-container {
+    display: flex;
+    height: inherit;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding: 0;
+  }
+
+  &__price {
+    align-self: flex-end;
+    margin-right: -50px;
+    margin-bottom: 10px;
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+}

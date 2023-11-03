@@ -1,0 +1,27 @@
+.wrapper-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-secondary,
+    $color-primary
+  );
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  animation: fadeOut 3s forwards;
+  animation: slideIn 0ms 3s forwards;
+}
+
+.logo--welcome {
+  opacity: 0;
+  animation: bounceIn 3s;
+}
+
+.logo-pic--welcome {
+  width: 300px;
+}

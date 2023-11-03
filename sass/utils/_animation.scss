@@ -1,70 +1,25 @@
+// menu green tick slide
 @keyframes myAnimation {
-    0% {
-        transform: translateX(50px);
-    }
-  
-    100% {
-        transform: translateX(0);
-    }
- }
-
- @keyframes myAnimationPrice {
-    0% {
-        transform: translateX(0);
-    }
-  
-    100% {
-        transform: translateX(-50px);
-    }
- }
-
-
-// @keyframes slide-right-pause {
-//     0% {
-//         transform: translateX(0);
-//     }
-
-//     100% {
-//         transform: translateX(0);
-//     }
-// }
-
-@keyframes bounceIn {
-    0% {
-      transform: scale(.5);
-    }
-  
-    20% {
-      transform: scale(1.2);
-    }
-  
-    40% {
-      transform: scale(0.8);
-    }
-  
-    60% {
-      transform: scale(1.1);
-    }
-  
-    80% {
-      transform: scale(0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  0% {
+    transform: translateX(50px);
   }
 
-
-// Set delay per List Item
-@for $i from 1 through $total-items {
-  li:nth-child(#{$i}) {
-    animation-delay: 0.25s * $i;
+  100% {
+    transform: translateX(0);
   }
 }
 
-// Keyframe animation
+@keyframes myAnimationPrice {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+// li gradual load
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -76,5 +31,62 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@for $i from 1 through $total-items {
+  li:nth-child(#{$i}) {
+    animation-delay: 0.25s * $i;
+  }
+}
+
+// welcome spinner
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(8000px);
+  }
+}
+
+// welcome logo bounce
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+
+  80% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

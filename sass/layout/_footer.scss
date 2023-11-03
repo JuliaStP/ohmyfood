@@ -1,36 +1,36 @@
 footer {
-    color: #fff;
-    background-color: #3C4142;
+  color: #fff;
+  background-color: #3c4142;
 }
 
-.footer-logo{
-    @media screen and (min-width: 1024px){ 
-        margin-left: 0;
-    }
+.footer-logo {
+  @media screen and (min-width: 1024px) {
+    margin-left: 0;
+  }
 }
 
-.footer-logo-pic  {
-    fill: white;
-    width: 30%;
-    padding: 15px 0;
+.footer-logo-pic {
+  fill: white;
+  width: 30%;
+  padding: 15px 0;
 }
- 
+
 .nav {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 
-.nav a {
-    margin-bottom: 8px;
-}
-
-.nav__item {
+  &__item {
     display: flex;
     align-items: center;
-}
+  }
 
-.nav__item-pic {
+  &__item-pic {
     width: 20px;
     margin-right: 5px;
+  }
+
+  a {
+    margin-bottom: 8px;
+  }
 }
