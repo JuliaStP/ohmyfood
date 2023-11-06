@@ -59,6 +59,7 @@
 
   &__svg {
     fill: grey;
+    height: 2em;
 
     @media screen and (min-width: 1024px) {
       height: 2.5em;
@@ -68,12 +69,30 @@
   &__svg--active {
     fill: url(#MyGradient);
     display: none;
-    opacity: 0;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+    @media screen and (min-width: 1024px) {
+      height: 2.5em;
+    }
+  }
+
+  &__svg--active--1 {
+    fill: url(#MyGradient1);
+    display: none;
+    @media screen and (min-width: 1024px) {
+      height: 2.5em;
+    }
+  }
+
+  &__svg--active--2 {
+    fill: url(#MyGradient2);
+    display: none;
+    @media screen and (min-width: 1024px) {
+      height: 2.5em;
+    }
+  }
+
+  &__svg--active--3 {
+    fill: url(#MyGradient3);
+    display: none;
     @media screen and (min-width: 1024px) {
       height: 2.5em;
     }
@@ -84,9 +103,9 @@
     .like-container__svg {
       display: none;
     }
-    .like-container__svg--active {
+    .like-container__svg--active, .like-container__svg--active--1, .like-container__svg--active--2, .like-container__svg--active--3 {
       display: block;
-      opacity: 1;
+      animation: fadeIn 1s forwards;
     }
   }
 
@@ -95,3 +114,17 @@
     height: 50px;
   }
 }
+
+// .like-container__svg--active--first {
+//   fill: url(#MyGradient1);
+//   display: none;
+//   opacity: 0;
+//   -webkit-transition: all 500ms ease-in-out;
+//   -moz-transition: all 500ms ease-in-out;
+//   -ms-transition: all 500ms ease-in-out;
+//   -o-transition: all 500ms ease-in-out;
+//   transition: all 500ms ease-in-out;
+//   @media screen and (min-width: 1024px) {
+//     height: 2.5em;
+//   }
+// }
