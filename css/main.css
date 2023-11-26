@@ -438,6 +438,13 @@ footer {
   border-radius: 15px;
   box-shadow: 5px 5px 5px 5px lightgrey;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+.how__step:hover {
+  background-color: #f5edff;
+}
+.how__step:hover .svg--main {
+  fill: #9356dc;
 }
 @media screen and (min-width: 1024px) {
   .how__step {
@@ -720,6 +727,7 @@ body {
 }
 .menu-list__item:hover .menu-list__price {
   animation: myAnimationPrice 1s forwards;
+  margin-left: 50px;
 }
 .menu-list__info {
   padding: 10px;

@@ -78,6 +78,15 @@ footer {
   border-radius: 15px;
   box-shadow: 5px 5px 5px 5px lightgrey;
   margin-bottom: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-lightpurple;
+
+    .svg--main{
+      fill: $color-primary;
+    }
+  }
 
   @media screen and (min-width: 1024px) {
     width: 50%;
